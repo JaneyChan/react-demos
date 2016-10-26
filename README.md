@@ -1,19 +1,20 @@
-## `React基础案例`
-learn-react：阮一峰的[入门实例教程](http://www.ruanyifeng.com/blog/2015/03/react.html)
+# react-demos
 
-## `Redux教程`
-来自于reactjs在[github](https://github.com/reactjs/redux)上的案例:
+01-react-basic: 来自[阮一峰的入门实例](http://www.ruanyifeng.com/blog/2015/03/react.html)
 
-01-count-redux
+02-react-router: [react router 案例](https://github.com/kdchang/reactjs101/tree/master/Ch05/react-router-example)
 
-02-todos
+03-redux-count: 基于redux的计数器,来自 [React router 官方教程](https://github.com/reactjs/redux/tree/master/examples)
+
+04-redux-todos: 简单的todos
 
 
-## `运行方式`
 
-### `npm start`
 
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-### `npm run build`
-Builds the app for production to the `build` folder.
+## 运行方式
+```
+npm install  // 在各个实例文件夹下安装
+```
+```
+npm start    // Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```
