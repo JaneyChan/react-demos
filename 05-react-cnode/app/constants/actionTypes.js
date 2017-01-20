@@ -1,0 +1,8 @@
+// 获取数据
+export const FETCH_DATA_FAIL = 'FETCH_DATA_FAIL';
+export const FETCH_DATA_SUCCESS = 'FETCH_DATA_SUCCESS';
+// 分页获取
+export const SWITCH_PAGINATION = 'SWITCH_PAGINATION';
+// 显示请求过程
+export const SHOW_PROGRESS = 'SHOW_PROGRESS';
+export const HIDE_PROGRESS = 'SWITCH_PAGINATION';

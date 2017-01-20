@@ -8,7 +8,7 @@
 
 04-redux-todos: 简单的todos
 
-
+05-react-cnode: 基于react+redux+ImmutableJS技术栈写的cnode社区，数据来源于[cnode api](http://cnodejs.org/api)
 
 
 ## 运行方式
