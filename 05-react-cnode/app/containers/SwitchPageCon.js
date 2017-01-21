@@ -1,11 +1,11 @@
 import { connect } from 'react-redux';
-import Page from '../components/Page';
+import Pagination from '../components/Pagination';
 import { getThenShow } from '../actions';
 
 const SwitchPageCon = connect(
   (state, ownProps) => ({
-    pageIndex: state.getIn(['listPage', 'pageIndex']),
-    tab: state.getIn(['listPage', 'tab']),
+    pageIndex: state.getIn(['toptics', 'pageIndex']),
+    tab: state.getIn(['toptics', 'tab']),
   }),
 
   (dispatch, ownProps) => ({
@@ -14,6 +14,6 @@ const SwitchPageCon = connect(
     },
   }),
 
-)(Page);
+)(Pagination);
 
 export default SwitchPageCon;

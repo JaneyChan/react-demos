@@ -1,4 +1,11 @@
-import { FETCH_DATA_SUCCESS, FETCH_DATA_FAIL, SWITCH_PAGINATION } from '../constants/actionTypes';
+import { 
+  FETCH_DATA_SUCCESS,
+  FETCH_DATA_FAIL,
+  SWITCH_PAGINATION,
+  SHOW_PROGRESS,
+  HIDE_PROGRESS,
+  USER_DETAIL_FETCH_DATA_SUCCESS,
+} from '../constants/actionTypes';
 
 /* 获取数据列表 */
 export const getThenShow = (index = 1, tab = "") => (dispatch) => {
@@ -23,4 +30,17 @@ export const getThenShow = (index = 1, tab = "") => (dispatch) => {
     .catch(() => dispatch({ type: FETCH_DATA_FAIL }));
 };
 
-export default getThenShow;
+export const getUserDetail = (username) => (dispatch) => {
+  let url = `https://cnodejs.org/api/v1/user/${username}`
+  fetch(url)
+    .then(response => {
+      return response.json()
+    })
+    .then(data => {
+      dispatch({
+        type: USER_DETAIL_FETCH_DATA_SUCCESS,
+        message: data,
+      })
+    })
+    .catch(() => dispatch({ type: FETCH_DATA_FAIL }));
+};

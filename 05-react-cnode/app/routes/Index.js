@@ -1,7 +1,7 @@
 import React from 'react';
 import SwitchPageCon from '../containers/SwitchPageCon';
 import Content from '../components/Content';
-import ListCon from '../containers/ListCon';
+import TopicsListCon from '../containers/TopicsListCon';
 
 export default class Index extends React.Component {
 
@@ -15,7 +15,7 @@ export default class Index extends React.Component {
     return (
       <div>
         <Content>
-          <ListCon tab={tab} pageIndex={1} />
+          <TopicsListCon tab={tab} pageIndex={1} />
         </Content>
         <SwitchPageCon tab={tab} pageIndex={1} />
       </div>

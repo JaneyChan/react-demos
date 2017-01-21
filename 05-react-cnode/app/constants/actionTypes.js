@@ -1,8 +1,10 @@
-// 获取数据
-export const FETCH_DATA_FAIL = 'FETCH_DATA_FAIL';
+// 获取主题列表数据
 export const FETCH_DATA_SUCCESS = 'FETCH_DATA_SUCCESS';
+export const FETCH_DATA_FAIL = 'FETCH_DATA_FAIL';
 // 分页获取
 export const SWITCH_PAGINATION = 'SWITCH_PAGINATION';
 // 显示请求过程
 export const SHOW_PROGRESS = 'SHOW_PROGRESS';
 export const HIDE_PROGRESS = 'SWITCH_PAGINATION';
+// 请求用户详情
+export const USER_DETAIL_FETCH_DATA_SUCCESS = 'USER_DETAIL_FETCH_DATA_SUCCESS';

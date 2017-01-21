@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux-immutable';
-import listPage from './listPage';
+import toptics from './toptics';
 
 const reducer = combineReducers({
-  listPage,
+  toptics,
 });
 
 export default reducer;

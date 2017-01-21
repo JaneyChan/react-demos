@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
-import Time from './Time';
+import Time from '../Time';
 
 const styles = {
   box: {
@@ -21,7 +21,7 @@ const styles = {
   },
 };
 
-class ListItem extends React.Component {
+class TopicItem extends React.Component {
   render() {
     return (
       <div style={styles.box}>
@@ -43,4 +43,4 @@ class ListItem extends React.Component {
   }
 }
 
-export default ListItem;
+export default TopicItem;

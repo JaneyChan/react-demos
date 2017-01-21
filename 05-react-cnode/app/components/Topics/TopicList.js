@@ -1,14 +1,13 @@
 import React from 'react';
-import ListItem from './ListItem';
+import ListItem from './TopicItem';
 
-export default class List extends React.Component {
+export default class TopicList extends React.Component {
 
   componentDidMount() {
     this.props.getIndexData();
   }
 
   componentDidUpdate(prevProps) {
-    console.log("prevProps.tab : " + prevProps.tab + ", this.props.tab: " + this.props.tab);
     if (prevProps.tab !== this.props.tab) {
       this.props.getIndexData();
     }

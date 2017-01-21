@@ -1,10 +1,10 @@
 import { connect } from 'react-redux';
-import List from '../components/List';
+import TopicList from '../components/Topics/TopicList';
 import { getThenShow } from '../actions';
 
 const ListCon = connect(
   (state, ownProps) => ({
-    list: state.getIn(['listPage', 'list']),
+    list: state.getIn(['toptics', 'list']),
   }),
 
   (dispatch, ownProps) => ({
@@ -13,6 +13,6 @@ const ListCon = connect(
     },
   }),
 
-)(List);
+)(TopicList);
 
 export default ListCon;
