@@ -18,7 +18,7 @@ export default class UserDetail extends React.Component {
         <SectionBox sectionTitle="主页">
           <UserInfo
             loginname="JaneChan"
-            avatar="http://www.2cto.com/uploadfile/Collfiles/20161109/2016110910414112183.jpg"
+            avatar="http://www.qqpk.cn/Article/UploadFiles/201202/20120212114848399.jpg"
             score="235"
             createAt="2017-01-12"/>
         </SectionBox>

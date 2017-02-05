@@ -1,7 +1,7 @@
 import React from 'react';
 import UserListItem from './UserListItem';
 
-// const UserReplys = (list) => (
+// const UserTopics = (list) => (
 //   <div>
 //     {list.map(
 //       (ele, index) => {
@@ -11,17 +11,13 @@ import UserListItem from './UserListItem';
 //   </div>
 // )
 
-class UserTopics extends React.Component {
-  render() {
-    return(
-      <div>
-        <UserListItem />
-        <UserListItem />
-        <UserListItem />
-        <UserListItem />
-      </div>
-    );   
-  }
-}
+const UserTopics = () => (
+  <div>
+    <UserListItem />
+    <UserListItem />
+    <UserListItem />
+    <UserListItem />
+  </div>
+);
 
 export default UserTopics;
