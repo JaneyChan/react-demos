@@ -12,13 +12,20 @@ const styles = {
   }
 };
 
-export const SectionBox = ({ sectionTitle, sectionChildren }) => (
-  <div style={styles.section}>
-    <div style={{ paddingBottom: '10px', 'borderBottom: '1px solid #f0f0f0' }}>
-      <span>
-        {sectionTitle}
-      </span>
-    </div>
-    {sectionChildren}
-  </div>
-);
+class SectionBox extends React.Component {
+
+  render() {
+    return(
+      <div style={styles.section}>
+        <div style={{ paddingBottom: '10px', borderBottom: '1px solid #f0f0f0' }}>
+          <span>
+            {this.props.sectionTitle}
+          </span>
+        </div>
+        {this.props.children}
+      </div>
+    );
+  }
+}
+
+export default SectionBox;

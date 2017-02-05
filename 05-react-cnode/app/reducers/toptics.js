@@ -1,7 +1,7 @@
 import { handleActions } from 'redux-actions';
 import { pageState } from '../constants/models';
 
-const listPage = handleActions({
+const toptics = handleActions({
   
   FETCH_DATA_SUCCESS: (state, { payload }) => (
     state.merge({
@@ -17,4 +17,4 @@ const listPage = handleActions({
   ),
 }, pageState);
 
-export default listPage;
+export default toptics;
