@@ -6,3 +6,6 @@ export const pageState = Immutable.fromJS({
   list: [],
 });
 
+export const userState = Immutable.fromJS({
+  userDetail: '',
+});
