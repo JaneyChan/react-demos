@@ -2,8 +2,6 @@ import {
   FETCH_DATA_SUCCESS,
   FETCH_DATA_FAIL,
   SWITCH_PAGINATION,
-  SHOW_PROGRESS,
-  HIDE_PROGRESS,
   USER_DETAIL_FETCH_DATA_SUCCESS,
 } from '../constants/actionTypes';
 
@@ -15,7 +13,7 @@ export const getThenShow = (index = 1, tab = "") => (dispatch) => {
     payload: { pageIndex: index, tab: tab }
   })
 
-  const url = `https://cnodejs.org/api/v1/topics?limit=20&mdrender=false&page=${index}&tab=${tab}`;
+  const url = `https://cnodejs.org/api/v1/topics?limit=10&mdrender=false&page=${index}&tab=${tab}`;
   fetch(url)
     .then(response => {
       return response.json();
@@ -30,8 +28,9 @@ export const getThenShow = (index = 1, tab = "") => (dispatch) => {
     .catch(() => dispatch({ type: FETCH_DATA_FAIL }));
 };
 
+/* 获取用户详情页 */
 export const getUserDetail = (username) => (dispatch) => {
-  let url = `https://cnodejs.org/api/v1/user/${username}`
+  const url = `https://cnodejs.org/api/v1/user/${username}`
   fetch(url)
     .then(response => {
       return response.json()
@@ -39,7 +38,7 @@ export const getUserDetail = (username) => (dispatch) => {
     .then(data => {
       dispatch({
         type: USER_DETAIL_FETCH_DATA_SUCCESS,
-        message: data,
+        payload: { userDetail: data },
       })
     })
     .catch(() => dispatch({ type: FETCH_DATA_FAIL }));
