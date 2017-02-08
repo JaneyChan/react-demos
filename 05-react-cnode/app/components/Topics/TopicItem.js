@@ -25,7 +25,7 @@ class TopicItem extends React.Component {
   render() {
     return (
       <div style={styles.box}>
-        <Link to={'/userDetail'}>
+        <Link to={`/u/${this.props.item.author.loginname}`}>
           <img
             style={styles.avatar}
             src={this.props.item.author.avatar_url}

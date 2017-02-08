@@ -39,7 +39,7 @@ render(
           <Route path="share" component={Content} />
           <Route path="ask" component={Content} />
           <Route path="job" component={Content} />
-          <Route path="userDetail" component={UserDetail} />
+          <Route path="u/:name" component={UserDetail} />
         </Route>
       </Router>
     </Provider>
