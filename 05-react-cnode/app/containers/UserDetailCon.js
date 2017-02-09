@@ -4,7 +4,7 @@ import UserDetail from '../components/UserDetail';
 
 const UserDetailCon = connect(
   (state, ownProps) => ({
-    // userDetail: state.getIn(['userDetail', 'list']),
+    user: state.getIn(['userDetail', 'userInfo']),
   }),
 
   (dispatch, ownProps) => ({

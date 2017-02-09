@@ -38,7 +38,7 @@ export const getUserDetail = (username) => (dispatch) => {
     .then(data => {
       dispatch({
         type: USER_DETAIL_FETCH_DATA_SUCCESS,
-        payload: { userDetail: data },
+        payload: { userInfo: data.data },
       })
     })
     .catch(() => dispatch({ type: FETCH_DATA_FAIL }));

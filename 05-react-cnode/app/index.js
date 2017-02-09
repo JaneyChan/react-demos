@@ -10,7 +10,7 @@ import reducer from './reducers';
 import Header from './components/Header';
 // import Index from './routes/Index';
 import Content from './components/Content';
-import UserDetail from './components/UserDetail';
+import User from './routes/User';
 
 const body = document.getElementsByTagName('body')[0];
 body.style.backgroundColor = '#f2f3f5';
@@ -39,7 +39,7 @@ render(
           <Route path="share" component={Content} />
           <Route path="ask" component={Content} />
           <Route path="job" component={Content} />
-          <Route path="u/:name" component={UserDetail} />
+          <Route path="u/:name" component={User} />
         </Route>
       </Router>
     </Provider>

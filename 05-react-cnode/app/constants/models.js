@@ -7,5 +7,5 @@ export const pageState = Immutable.fromJS({
 });
 
 export const userState = Immutable.fromJS({
-  userDetail: '',
+  userInfo: '',
 });

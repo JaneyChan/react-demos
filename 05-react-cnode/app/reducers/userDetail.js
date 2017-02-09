@@ -5,7 +5,7 @@ const userDetail = handleActions({
   
   USER_DETAIL_FETCH_DATA_SUCCESS: (state, { payload }) => (
     state.merge({
-      userDetail: payload.userDetail,
+      userInfo: payload.userInfo,
     })
   ),
 

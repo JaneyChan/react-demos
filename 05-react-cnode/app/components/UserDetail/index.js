@@ -21,13 +21,18 @@ export default class UserDetail extends React.Component {
   }
 
   render() {
+    const user = this.props.userInfo;
+    if (!user) {
+      return (<div></div>);
+    }
+    
     return(
       <div style={styles.box}>
         <SectionBox sectionTitle="主页">
           <UserInfo
-            loginname="JaneChan"
-            avatar="http://www.qqpk.cn/Article/UploadFiles/201202/20120212114848399.jpg"
-            score="235"
+            loginname={user.loginname}
+            avatar={user.avatar_url}
+            score={user.score}
             createAt="2017-01-12"/>
         </SectionBox>
 
