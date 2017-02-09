@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 import Time from '../Time';
 
 const styles = {
@@ -21,12 +22,18 @@ const styles = {
 }
 
 
-const UserListItem = () => (
-  <div style={styles.listBox}>
-    <img style={styles.listAvatar} src={'http://www.qqpk.cn/Article/UploadFiles/201202/20120212114848399.jpg'} />
-    <span>{'我的标题'}</span>
-    <span>{'2016-10-01'}</span>
-  </div>
-);
+class UserListItem extends React.Component {
+  render() {
+    const topic = this.props.topic;
+
+    return (
+      <div style={styles.listBox}>
+        <img style={styles.listAvatar} src={topic.author.avatar_url} />
+        <Link style={styles.listTitle} to={`/`}>{topic.title}</Link>
+        <span>{Time(topic.last_reply_at)}</span>
+      </div>
+    );
+  }
+}
 
 export default UserListItem;

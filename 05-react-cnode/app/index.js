@@ -8,8 +8,7 @@ import { Provider } from 'react-redux';
 import Immutable from 'immutable';
 import reducer from './reducers';
 import Header from './components/Header';
-// import Index from './routes/Index';
-import Content from './components/Content';
+import Index from './routes/Index';
 import User from './routes/User';
 
 const body = document.getElementsByTagName('body')[0];
@@ -34,11 +33,11 @@ render(
     <Provider store={store}>
       <Router history={hashHistory}>
         <Route path="/" component={Header}>
-          <IndexRoute component={Content} />
-          <Route path="good" component={Content} />
-          <Route path="share" component={Content} />
-          <Route path="ask" component={Content} />
-          <Route path="job" component={Content} />
+          <IndexRoute component={Index} />
+          <Route path="good" component={Index} />
+          <Route path="share" component={Index} />
+          <Route path="ask" component={Index} />
+          <Route path="job" component={Index} />
           <Route path="u/:name" component={User} />
         </Route>
       </Router>

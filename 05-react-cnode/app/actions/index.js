@@ -13,7 +13,7 @@ export const getThenShow = (index = 1, tab = "") => (dispatch) => {
     payload: { pageIndex: index, tab: tab }
   })
 
-  const url = `https://cnodejs.org/api/v1/topics?limit=10&mdrender=false&page=${index}&tab=${tab}`;
+  const url = `https://cnodejs.org/api/v1/topics?limit=20&mdrender=false&page=${index}&tab=${tab}`;
   fetch(url)
     .then(response => {
       return response.json();

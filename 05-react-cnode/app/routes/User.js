@@ -12,7 +12,7 @@ export default class User extends React.Component {
 	}
 
 	render() {
-		let username = this.props.params.name
+		let username = this.props.params.name;
 		return (
 			<div>
 				<UserDetailCon username={username} />
